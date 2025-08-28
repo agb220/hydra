@@ -1,26 +1,34 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.hidden-scrollbar::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-*: initial;
+  --color-bg-purple: #302c42;
+  --color-bg-dark: #211e2e;
+  --color-white: #ffffff;
+  --color-purple: #343045;
+  --color-purple-text-gradient: linear-gradient(92deg, #c0b7e8 -1.02%, #8176af 36.25%);
+  --color-purple-text-gradient-2: linear-gradient(269deg, #c0b7e8 -3.72%, #8176af 82.17%);
+  --color-bg-btn: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
+  --color-bg-card: radial-gradient(50% 50% at 50% 50%, #433d60 0%, #211e2e 100%);
+  --color-bg-fill: linear-gradient(251deg, #c0b7e8 12.87%, #8176af 89.33%);
+  --color-bg-form: radial-gradient(50% 50% at 50% 50%, #403a5f 0%, #211e2e 100%);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  background-color: var(--color-bg-purple);
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+@utility container {
+  @apply mx-auto max-w-[calc(100%-32px)] md:max-w-[calc(100%-80px)] xl:max-w-[1440px];
 }
