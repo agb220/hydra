@@ -1,32 +1,33 @@
+'use client';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
 import MenuLink from '../../MenuLink';
 import Button from '../../Button';
 import HeaderMobile from './HeaderMobile';
-
-export const MOCK_MENU = [
-  {
-    name: 'ABOUT',
-    href: '#about',
-  },
-  {
-    name: 'SERVICES',
-    href: '#services',
-  },
-  {
-    name: 'TECHNOLOGIES',
-    href: '#technologies',
-  },
-  {
-    name: 'HOW TO',
-    href: '#howto',
-  },
-];
+import { MOCK_MENU } from '@/utilities/mocks';
+import { cn } from '@/utilities/cn';
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState<boolean>(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
     <header className="container fixed top-0 left-0 right-0 z-10">
-      <div className="flex items-center justify-between gap-5 pt-2">
+      <div
+        className={cn('flex items-center justify-between gap-5 pt-2', {
+          'backdrop-blur-[2px] bg-[rgba(26,26,26,0.01)]': isScrolled,
+        })}
+      >
         <div className="max-h-[65px] xl:max-h-[103px] grow max-w-[193px]">
           <Image
             src={'/images/logo/logo-group.svg'}

@@ -24,6 +24,7 @@
 
 body {
   font-size: 12px;
+  font-weight: 400;
   background-color: var(--color-bg-purple);
   color: var(--color-white);
   line-height: 1.2;
@@ -31,4 +32,36 @@ body {
 
 @utility container {
   @apply mx-auto max-w-[calc(100%-32px)] md:max-w-[calc(100%-80px)] xl:max-w-[1440px];
+}
+
+/*SCROLL*/
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+/* WebKit */
+*::-webkit-scrollbar {
+  width: 0.5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #3a3a42 !important;
 }

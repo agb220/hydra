@@ -6,9 +6,7 @@ import BurgerMenuBtn from './BurgerBtn';
 import Sidebar from './Sidebar';
 import { useLockBodyScroll } from '@/utilities/hooks/useLockBodyScroll';
 
-export interface HeaderMobileProps {}
-
-const HeaderMobile = (props: HeaderMobileProps) => {
+const HeaderMobile = () => {
   const [openSidebar, setOpenSidebar] = useCycle<boolean>(false, true);
 
   useEffect(() => {
@@ -25,12 +23,7 @@ const HeaderMobile = (props: HeaderMobileProps) => {
       {openSidebar ? <BodyScrollLocker /> : <></>}
 
       <BurgerMenuBtn animateToClose={openSidebar} onClick={() => setOpenSidebar()} />
-      <Sidebar
-        {...props}
-        isOpen={openSidebar}
-        onNavigate={() => setOpenSidebar()}
-        // socialMedia={props.socialMedia}
-      />
+      <Sidebar isOpen={openSidebar} onNavigate={() => setOpenSidebar()} />
     </>
   );
 };
