@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import { MOCK_MENU } from './header/Header';
 import MenuLink from '../MenuLink';
 import SocialMedia from '../SocialMedia';
+import { MOCK_MENU } from '@/utilities/mocks';
 
 const Footer = () => {
   return (

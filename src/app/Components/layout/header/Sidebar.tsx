@@ -1,12 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import type { Variants } from 'framer-motion';
 import { motion } from 'framer-motion';
-import type { HeaderMobileProps } from './HeaderMobile';
-import { MOCK_MENU } from './Header';
+
 import Button from '../../Button';
+import { MOCK_MENU } from '@/utilities/mocks';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -24,7 +23,7 @@ const sidebarAnimation: Variants = {
   },
 };
 
-const Sidebar = (props: SidebarProps & HeaderMobileProps) => {
+const Sidebar = (props: SidebarProps) => {
   return (
     <>
       <motion.div
@@ -52,7 +51,7 @@ const Sidebar = (props: SidebarProps & HeaderMobileProps) => {
                 </div>
               </div>
             </nav>
-            <div className="container flex flex-col gap-12 py-12 md:py-16 lg:py-18 xl:py-6 border-top-white border-top">
+            <div className="container flex flex-col gap-8 py-5 md:py-16 lg:py-18 xl:py-6 border-top-white border-top">
               <Button variant="outline" className="w-full text-base max-h-[52px]">
                 CONTACT US
               </Button>

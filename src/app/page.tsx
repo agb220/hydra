@@ -1,5 +1,9 @@
-import Image from 'next/image';
+import HeroSection from './components/HeroSection';
 
 export default function Home() {
-  return <main className="mt-[150px]">hydra</main>;
+  return (
+    <main className="mt-[103px] ">
+      <HeroSection />
+    </main>
+  );
 }
