@@ -6,23 +6,32 @@ const HeroSection = () => {
   return (
     <section className="min-h-svh container">
       <div className="flex flex-col-reverse xl:flex-row justify-between items-center gap-20 xl:gap-10 pt-5 pb-[53px] xl:pt-[100px] xl:pb-[100px]">
-        <div className="flex flex-col xl:max-w-[456px]">
-          <h1 className="text-4xl md:text-[46px] font-bold mb-9">
-            <span className="text-2xl  text-[40px] bg-[linear-gradient(92deg,#C0B7E8_-1.02%,#8176AF_36.25%)] bg-clip-text text-transparent">
-              Dive{' '}
-            </span>
-            Into The Depths of{' '}
-            <span className="text-2xl  text-[40px] bg-[linear-gradient(92deg,#C0B7E8_-1.02%,#8176AF_36.25%)] bg-clip-text text-transparent">
-              Virtual Reality
-            </span>
-          </h1>
-          <p className="mb-[53px] md:mb-[66px] text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .
-          </p>
-          <Button className="w-full md:w-fill md:max-w-60" icon={<ArrowSvg />}>
-            BUILD YOUR WORLD
-          </Button>
+        <div className="relative">
+          <Image
+            src={'/images/lines/line4.svg'}
+            alt={''}
+            width={238}
+            height={561}
+            className="absolute -left-[10%] -top-60 hidden xl:block -z-1  pointer-events-none"
+          />
+          <div className="flex flex-col xl:max-w-[456px]">
+            <h1 className="text-4xl md:text-[46px] font-bold mb-9">
+              <span className="text-2xl  text-[40px] bg-[linear-gradient(92deg,#C0B7E8_-1.02%,#8176AF_36.25%)] bg-clip-text text-transparent">
+                Dive{' '}
+              </span>
+              Into The Depths of{' '}
+              <span className="text-2xl  text-[40px] bg-[linear-gradient(92deg,#C0B7E8_-1.02%,#8176AF_36.25%)] bg-clip-text text-transparent">
+                Virtual Reality
+              </span>
+            </h1>
+            <p className="mb-[53px] md:mb-[66px] text-base">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .
+            </p>
+            <Button className="w-full md:w-fill md:max-w-60" icon={<ArrowSvg />}>
+              BUILD YOUR WORLD
+            </Button>
+          </div>
         </div>
         <div className="relative">
           <Image
