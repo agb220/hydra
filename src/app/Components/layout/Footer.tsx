@@ -5,20 +5,20 @@ import { MOCK_MENU } from '@/utilities/mocks';
 
 const Footer = () => {
   return (
-    <footer className="py-[59px] relative overflow-x-hidden">
+    <footer className="pb-[89px] md:pb-[59px] pt-[81px] md:pt-[129px] relative overflow-x-hidden">
       <Image
-        src={'/images/lines/line8.svg'}
+        src={'/images/lines/line19.svg'}
         alt={''}
         width={1440}
         height={1}
-        className="rotate-[355deg] max-w-[1440px] absolute -top-5 left-0 md:left-20 pointer-events-none -z-1"
+        className="absolute -top-1/3 left-0 md:left-20 pointer-events-none -z-1"
       />
       <Image
-        src={'/images/lines/line7.svg'}
+        src={'/images/lines/line18.svg'}
         alt={''}
         width={1440}
         height={1}
-        className="rotate-[10deg] max-w-[1440px] absolute top-[120px] left-0 md:left-20 pointer-events-none -z-1"
+        className="absolute bottom-1/3 left-0 md:left-20 pointer-events-none -z-1"
       />
 
       <div className="container ">
