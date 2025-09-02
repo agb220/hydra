@@ -62,7 +62,7 @@ const TehnologiesSection = () => {
                 alt="Tech Hydra: Vive"
                 width={282}
                 height={282}
-                className="object-contain filter group-hover:scale-110 transition duration-200 h-full"
+                className="object-contain filter group-hover:scale-110 transition duration-200"
               />
             </div>
           </div>
