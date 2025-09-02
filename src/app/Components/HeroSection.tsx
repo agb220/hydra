@@ -28,7 +28,7 @@ const HeroSection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .
             </p>
-            <Button className="w-full md:w-fill md:max-w-60" icon={<ArrowSvg />}>
+            <Button className="w-full md:w-fit md:max-w-60" icon={<ArrowSvg />}>
               BUILD YOUR WORLD
             </Button>
           </div>

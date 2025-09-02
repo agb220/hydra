@@ -27,7 +27,7 @@ const Sidebar = (props: SidebarProps) => {
   return (
     <>
       <motion.div
-        className="fixed right-0 top-[65px] xl:top-[110px] h-svh w-screen overflow-hidden z-40"
+        className="fixed right-0 top-[65px] xl:top-[110px] h-svh w-full overflow-hidden z-40"
         variants={sidebarAnimation}
         initial={false}
         animate={props.isOpen ? 'open' : 'closed'}
@@ -35,7 +35,7 @@ const Sidebar = (props: SidebarProps) => {
           height: 'var(--app-height)',
         }}
       >
-        <div className="h-[calc(100%-73px)] md:h-[calc(100%-103px)] bg-bg-purple overflow-auto">
+        <div className="h-[calc(100%-53px)] md:h-[calc(100%-60px)] bg-bg-purple overflow-auto">
           <div className="flex w-full flex-col justify-between h-full">
             <nav className="pr-1 mt-6">
               <div className="container">
@@ -51,11 +51,11 @@ const Sidebar = (props: SidebarProps) => {
                 </div>
               </div>
             </nav>
-            <div className="container flex flex-col gap-8 py-5 md:py-16 lg:py-18 xl:py-6 border-top-white border-top">
-              <Button variant="outline" className="w-full text-base max-h-[52px]">
+            <div className="container flex flex-col md:flex-row gap-8 py-10 md:py-16 lg:py-18 xl:py-6 border-white border-t items-center md:justify-center">
+              <Button variant="outline" className="w-full md:w-fit text-base max-h-[52px]">
                 CONTACT US
               </Button>
-              <Button className="w-full text-base max-h-[52px]">JOIN HYDRA</Button>
+              <Button className="w-full  md:w-fit text-base max-h-[52px]">JOIN HYDRA</Button>
             </div>
           </div>
         </div>
