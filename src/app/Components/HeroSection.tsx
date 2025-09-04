@@ -28,7 +28,12 @@ const HeroSection = () => {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
               incididunt ut labore et dolore nisl tincidunt eget. Lectus mauris eros in vitae .
             </p>
-            <Button className="w-full md:w-fit md:max-w-60" icon={<ArrowSvg />}>
+            <Button
+              as="a"
+              href="#services"
+              className="w-full md:w-fit md:max-w-60"
+              icon={<ArrowSvg />}
+            >
               BUILD YOUR WORLD
             </Button>
           </div>
@@ -75,9 +80,7 @@ const HeroSection = () => {
               </div>
               <div className="flex flex-col gap-2.5">
                 <h4 className="font-bold text-sm xl:text-2xl">Pay Us a Visit</h4>
-                <p className="text-xs md:text-sm max-w-50 md:max-w-full">
-                  Union St, Seattle, WA 98101, United States
-                </p>
+                <p className="text-xs md:text-sm">Union St, Seattle, WA 98101, United States</p>
               </div>
             </li>
             <li className="flex gap-1 items-center pr-5 pl-5 md:pl-[47.5px] md:pr-[66px] border-r border-[rgba(192,183,232,0.33)] min-w-70 md:min-w-100">
