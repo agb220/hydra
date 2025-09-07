@@ -12,7 +12,7 @@ const ServicesSection = () => {
           alt={''}
           width={1440}
           height={257}
-          className="absolute left-40 bottom-[-45%] -z-1 pointer-events-none   max-w-[1440px] fidden md:block"
+          className="absolute left-40 bottom-[-45%] -z-1 pointer-events-none   max-w-[1440px] hidden md:block"
         />
         <div className="container">
           <Title
