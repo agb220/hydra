@@ -43,3 +43,18 @@ export const MOC_SERVICES = [
       'Vitae sapien pellentesque habitant morbi nunc. Viverra aliquet  porttitor rhoncus libero justo laoreet sit amet vitae.',
   },
 ];
+
+export const MOCK_HOW_WE_BUILD = [
+  {
+    title: '3D Conception <br/> & Design',
+  },
+  {
+    title: 'Interaction <br/> Design',
+  },
+  {
+    title: 'VR World <br/> User Testing',
+  },
+  {
+    title: 'Hydra VR <br/> Deploy',
+  },
+];
