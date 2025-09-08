@@ -3,6 +3,7 @@ import HeroSection from './components/HeroSection';
 import HowWeBuildSection from './components/HowWeBuildSection';
 import ServicesSection from './components/ServicesSection';
 import TehnologiesSection from './components/TehnologiesSection';
+import FormSection from './components/FormSection';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ServicesSection />
       <TehnologiesSection />
       <HowWeBuildSection />
+      <FormSection />
     </main>
   );
 }

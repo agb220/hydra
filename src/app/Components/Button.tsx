@@ -42,7 +42,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>((props, ref) => {
   return (
     <div className={cn('group  w-full md:w-fit', { 'flex gap-10 items-center': icon })}>
       <Component ref={ref} type={type} className={merged} disabled={disabled} {...rest}>
-        {children}
+        {isLoading ? (
+          <div className="flex items-center gap-2">
+            <span className="w-4 h-4 border-2 border-t-transparent border-purple rounded-full animate-spin"></span>
+            Loading...
+          </div>
+        ) : (
+          children
+        )}
       </Component>
 
       {icon && (

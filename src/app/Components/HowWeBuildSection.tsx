@@ -20,7 +20,7 @@ const HowWeBuildSection = () => {
           alt={''}
           width={1440}
           height={257}
-          className="absolute inset-x-0 bottom-[25%] -z-1 pointer-events-none w-full hidden md:blcok"
+          className="absolute inset-x-0 bottom-[25%] -z-1 pointer-events-none w-full hidden md:block"
         />
         <div className="container">
           <ul className="flex justify-between items-center gap-5 md:gap-10 overflow-auto">
