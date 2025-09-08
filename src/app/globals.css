@@ -18,12 +18,10 @@ html {
   --color-bg-dark: #211e2e;
   --color-white: #ffffff;
   --color-purple: #343045;
-  --color-purple-text-gradient: linear-gradient(92deg, #c0b7e8 -1.02%, #8176af 36.25%);
-  --color-purple-text-gradient-2: linear-gradient(269deg, #c0b7e8 -3.72%, #8176af 82.17%);
-  --color-bg-btn: linear-gradient(90deg, #8176af 0%, #c0b7e8 100%);
-  --color-bg-card: radial-gradient(50% 50% at 50% 50%, #433d60 0%, #211e2e 100%);
-  --color-bg-fill: linear-gradient(251deg, #c0b7e8 12.87%, #8176af 89.33%);
-  --color-bg-form: radial-gradient(50% 50% at 50% 50%, #403a5f 0%, #211e2e 100%);
+  --color-purple-100: #bcb2e4;
+  --color-purple-200: #9382d8;
+  --color-red: #e12c2c;
+  --color-grey: #b4b2b2;
 }
 
 body {
@@ -68,4 +66,40 @@ body {
 
 *::-webkit-scrollbar-track {
   background-color: #3a3a42 !important;
+}
+
+/*Input styles for background and text color together*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition:
+    background-color 5000s ease-in-out 0s,
+    color 5000s ease-in-out 0s;
+  background-color: inherit !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+/*Hiding the autofill input for safari*/
+
+input[type='text']::-webkit-contacts-auto-fill-button,
+input[type='text']::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+input[type='text'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+[class*='__container'] {
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 15px;
 }

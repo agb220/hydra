@@ -1,10 +1,11 @@
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import Head from 'next/head';
-
-import './globals.css';
 import Header from './components/layout/header/Header';
 import Footer from './components/layout/Footer';
+import { Toaster } from 'react-hot-toast';
+
+import './globals.css';
 
 const montserrat = Montserrat({
   variable: '--font-montserrat',
@@ -34,6 +35,31 @@ export default function RootLayout({
       <body className={`${montserrat.variable}  antialiased`}>
         <Header />
         {children}
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            success: {
+              style: {
+                background: '#9382d8',
+                color: '#fff',
+              },
+              iconTheme: {
+                primary: '#fff',
+                secondary: '#9382d8',
+              },
+            },
+            error: {
+              style: {
+                background: '#f87171',
+                color: '#fff',
+              },
+              iconTheme: {
+                primary: '#fff',
+                secondary: '#b91c1c',
+              },
+            },
+          }}
+        />
         <Footer />
       </body>
     </html>

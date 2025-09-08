@@ -2,7 +2,7 @@
 import type { NextConfig } from 'next';
 
 const nextConfig = {
-  turbopack: false,
+  turbopack: {},
   webpack(config: { module: { rules: { test: RegExp; use: string[] }[] } }) {
     config.module.rules.push({
       test: /\.svg$/,
