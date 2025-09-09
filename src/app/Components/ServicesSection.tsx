@@ -5,7 +5,10 @@ import { MOC_SERVICES } from '@/utilities/mocks';
 
 const ServicesSection = () => {
   return (
-    <section className="pb-14 md:pb-[114px] overflow-hidden" id="services">
+    <section
+      className="pb-14 md:pb-[114px] overflow-hidden scroll-mt-17 md:scroll-mt-30"
+      id="services"
+    >
       <div className="relative">
         <Image
           src={'/images/lines/line14.svg'}

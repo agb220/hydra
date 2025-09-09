@@ -5,7 +5,7 @@ import ArrowRightSvg from './icons/ArrowRight';
 
 const HowWeBuildSection = () => {
   return (
-    <section className="mb-28">
+    <section className="mb-28 scroll-mt-17 md:scroll-mt-30" id="howto">
       <div className="container">
         <Title
           title={'HOW WE BUILD <br/> <span class="font-light">WITH HYDRA VR?</span>'}

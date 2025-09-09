@@ -4,7 +4,7 @@ import { ChevroneSvg } from './icons';
 const TehnologiesSection = () => {
   return (
     <section>
-      <div className="container">
+      <div className="container ">
         <div className="relative mb-10">
           <div
             className="w-full h-[163px] md:h-[303px] 
@@ -27,7 +27,7 @@ const TehnologiesSection = () => {
             </div>
           </div>
         </div>
-        <div id="technologies" className="overflow-x-auto pb-10 ">
+        <div id="technologies" className="overflow-x-auto pb-10 scroll-mt-10 md:scroll-mt-0">
           <div className="flex gap-10 items-center justify-between">
             <div className="aspect-[174 / 174] group min-w-[174px]">
               <Image

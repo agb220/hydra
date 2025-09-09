@@ -4,7 +4,10 @@ import Button from './Button';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="mb-15 md:mb-[111px] overflow-hidden">
+    <section
+      id="about"
+      className="mb-15 md:mb-[111px] overflow-hidden scroll-mt-17 md:scroll-mt-30"
+    >
       <div className="container">
         <Title
           title={'INTRODUCTION <br/> <span class="font-light">TO HYDRA VR</span>'}

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import MenuLink from '../MenuLink';
 import SocialMedia from '../SocialMedia';
 import { MOCK_MENU } from '@/utilities/mocks';
+import Button from '../Button';
 
 const Footer = () => {
   return (
@@ -63,6 +64,9 @@ const Footer = () => {
           <div className="relative self-center xl:self-start">
             <div className="md:pl-[71px] md:before:absolute before:left-0 md:before:top-0 md:before:h-full md:before:w-[6px] md:before:bg-[linear-gradient(180deg,#343045_0%,#C0B7E8_35%,#8176AF_68%,#343045_100%)]">
               <SocialMedia />
+              <Button as="a" href="#joinhydra" className="w-full md:w-fit">
+                BUILD YOUR WORLD
+              </Button>
             </div>
           </div>
         </div>

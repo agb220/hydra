@@ -69,9 +69,6 @@ const SocialMedia = () => {
           </a>
         </li>
       </ul>
-      <Button as="a" href="#goinhydra" className="w-full md:w-fit">
-        BUILD YOUR WORLD
-      </Button>
     </div>
   );
 };

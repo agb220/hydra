@@ -47,10 +47,12 @@ const Header = () => {
           </ul>
         </nav>
         <div className="hidden xl:flex gap-9">
-          <Button variant="outline" className="min-w-[154px]">
+          <Button variant="outline" className="min-w-[154px]" as={'a'} href="tel:+1101111010">
             CONTACT US
           </Button>
-          <Button className="min-w-[154px]">JOIN HYDRA</Button>
+          <Button className="min-w-[154px]" as={'a'} href="#joinhydra">
+            JOIN HYDRA
+          </Button>
         </div>
         <div className="xl:hidden">
           <HeaderMobile />

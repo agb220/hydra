@@ -52,10 +52,17 @@ const Sidebar = (props: SidebarProps) => {
               </div>
             </nav>
             <div className="container flex flex-col md:flex-row gap-8 py-10 md:py-16 lg:py-18 xl:py-6 border-white border-t items-center md:justify-center">
-              <Button variant="outline" className="w-full md:w-fit text-base max-h-[52px]">
+              <Button
+                variant="outline"
+                className="w-full md:w-fit text-base max-h-[52px]"
+                as={'a'}
+                href="tel:+1101111010"
+              >
                 CONTACT US
               </Button>
-              <Button className="w-full  md:w-fit text-base max-h-[52px]">JOIN HYDRA</Button>
+              <Button className="w-full  md:w-fit text-base max-h-[52px]" href="#joinhydra">
+                JOIN HYDRA
+              </Button>
             </div>
           </div>
         </div>
