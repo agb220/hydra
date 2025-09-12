@@ -6,6 +6,7 @@ import Button from '../../Button';
 import HeaderMobile from './HeaderMobile';
 import { MOCK_MENU } from '@/utilities/mocks';
 import { cn } from '@/utilities/cn';
+import Link from 'next/link';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -28,7 +29,7 @@ const Header = () => {
           'backdrop-blur-[2px] bg-[rgba(26,26,26,0.01)]': isScrolled,
         })}
       >
-        <div className="max-h-[65px] xl:max-h-[103px] grow max-w-[193px]">
+        <Link href="/" className="max-h-[65px] xl:max-h-[103px] grow max-w-[193px]">
           <Image
             src={'/images/logo/logo-group.svg'}
             alt={'Hydra: Dive Into The Depths Of Virtual Reality'}
@@ -36,11 +37,11 @@ const Header = () => {
             height={103}
             className="relative z-5 max-h-[65px] xl:max-h-[103px] w-auto"
           />
-        </div>
+        </Link>
         <nav className="hidden xl:flex">
           <ul className="flex gap-[42px]">
             {MOCK_MENU.map((item, index) => (
-              <li key={index} className="font-bold relative group">
+              <li key={index} className="font-bold relative group text-sm">
                 <MenuLink href={item.href} name={item.name} />
               </li>
             ))}

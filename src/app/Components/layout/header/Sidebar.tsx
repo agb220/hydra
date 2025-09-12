@@ -60,7 +60,12 @@ const Sidebar = (props: SidebarProps) => {
               >
                 CONTACT US
               </Button>
-              <Button className="w-full  md:w-fit text-base max-h-[52px]" href="#joinhydra">
+              <Button
+                className="w-full  md:w-fit text-base max-h-[52px]"
+                as="a"
+                href="#joinhydra"
+                onClick={props.onNavigate}
+              >
                 JOIN HYDRA
               </Button>
             </div>

@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Button from './Button';
@@ -7,7 +6,7 @@ import { ArrowSvg, LocationSvg, MailSvg, PhoneSvg } from './icons';
 
 const HeroSection = () => {
   return (
-    <section className="min-h-svh container">
+    <section className="xl:min-h-svh container overflow-x-hidden">
       <div className="flex flex-col-reverse xl:flex-row justify-between items-center gap-20 xl:gap-10 pt-5 pb-[53px] xl:pt-[100px] xl:pb-[100px]">
         <div className="relative">
           <Image
@@ -20,8 +19,9 @@ const HeroSection = () => {
           <div className="flex flex-col xl:max-w-[456px]">
             <motion.h1
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: false, amount: 0.3 }}
               className="text-4xl md:text-[46px] font-bold mb-9"
             >
               <span className="text-2xl  text-[40px] bg-[linear-gradient(92deg,#C0B7E8_-1.02%,#8176AF_36.25%)] bg-clip-text text-transparent">
@@ -34,8 +34,9 @@ const HeroSection = () => {
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: false, amount: 0.3 }}
               className="mb-[53px] md:mb-[66px] text-base"
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -43,8 +44,9 @@ const HeroSection = () => {
             </motion.p>
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <Button
                 as="a"
@@ -93,16 +95,18 @@ const HeroSection = () => {
       <motion.div
         className="py-[49px] px-5 md:px-[39px] bg-[radial-gradient(2900.76%_50.13%_at_50%_53.89%,rgba(58,52,86,0.95)_0%,#211E2E_100%)] rounded-[90px] mb-[94px]"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
       >
         <div className="overflow-x-auto">
           <ul className="flex gap-2">
             <motion.li
               className="flex gap-1 items-center pr-5 md:pr-[42.5px] border-r border-[rgba(192,183,232,0.33)] min-w-80 md:min-w-100"
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <div className="min-w-10">
                 <LocationSvg />
@@ -115,8 +119,9 @@ const HeroSection = () => {
             <motion.li
               className="flex gap-1 items-center pr-5 pl-5 md:pl-[47.5px] md:pr-[66px] border-r border-[rgba(192,183,232,0.33)] min-w-70 md:min-w-100"
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <PhoneSvg />
               <div className="flex flex-col gap-[9px]">
@@ -129,8 +134,9 @@ const HeroSection = () => {
             <motion.li
               className="flex gap-1 items-center pl-5 md:pl-[47.5px] min-w-70 md:min-w-100"
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
             >
               <MailSvg />
               <div className="flex flex-col gap-[9px]">
