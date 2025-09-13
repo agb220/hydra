@@ -1,10 +1,15 @@
+'use client';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Title from './Title';
 import Button from './Button';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="mb-15 md:mb-[111px] overflow-hidden">
+    <section
+      id="about"
+      className="mb-15 md:mb-[111px] overflow-hidden scroll-mt-17 md:scroll-mt-30"
+    >
       <div className="container">
         <Title
           title={'INTRODUCTION <br/> <span class="font-light">TO HYDRA VR</span>'}
@@ -39,10 +44,22 @@ const AboutSection = () => {
             />
           </div>
           <div className="md:basis-[630px]">
-            <h2 className="font-bold text-[26px] md:text-4xl self-center md:self-start flex flex-col mb-[38px] md:mb-[42px]">
+            <motion.h2
+              className="font-bold text-[26px] md:text-4xl self-center md:self-start flex flex-col mb-[38px] md:mb-[42px]"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
               ABOUT <span className="text-[rgba(255,255,255,0.95)] font-light">HYDRA VR</span>
-            </h2>
-            <p className="text-sm lg:text-base mb-7">
+            </motion.h2>
+            <motion.p
+              className="text-sm lg:text-base mb-7"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
               Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus urna
               neque viverra justo. Vivamus at augue eget arcu dictum. Ultrices gravida dictum fusce
               ut placerat orci. Aenean et tortor at risus viverra adipiscing at in. Mattis aliquam
@@ -51,10 +68,17 @@ const AboutSection = () => {
               dictum non consectetur a. Laoreet sit amet cursus sit amet. Vel eros donec ac odio
               tempor orci dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing
               bibendum. Leo a diam sollicitudi n tempor.
-            </p>
-            <Button as="a" href="#joinhydra" className="w-full md:w-fit">
-              LET’S GET IN TOUCH
-            </Button>
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.9 }}
+              viewport={{ once: false, amount: 0.3 }}
+            >
+              <Button as="a" href="#joinhydra" className="w-full md:w-fit">
+                LET’S GET IN TOUCH
+              </Button>
+            </motion.div>
           </div>
         </div>
       </div>

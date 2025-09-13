@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import MenuLink from '../../MenuLink';
 import Button from '../../Button';
 import HeaderMobile from './HeaderMobile';
@@ -21,6 +22,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <header className="container fixed top-0 left-0 right-0 z-10">
       <div
@@ -28,7 +30,7 @@ const Header = () => {
           'backdrop-blur-[2px] bg-[rgba(26,26,26,0.01)]': isScrolled,
         })}
       >
-        <div className="max-h-[65px] xl:max-h-[103px] grow max-w-[193px]">
+        <Link href="/" className="max-h-[65px] xl:max-h-[103px] grow max-w-[193px]">
           <Image
             src={'/images/logo/logo-group.svg'}
             alt={'Hydra: Dive Into The Depths Of Virtual Reality'}
@@ -36,21 +38,23 @@ const Header = () => {
             height={103}
             className="relative z-5 max-h-[65px] xl:max-h-[103px] w-auto"
           />
-        </div>
+        </Link>
         <nav className="hidden xl:flex">
           <ul className="flex gap-[42px]">
             {MOCK_MENU.map((item, index) => (
-              <li key={index} className="font-bold relative group">
+              <li key={index} className="font-bold relative group text-sm">
                 <MenuLink href={item.href} name={item.name} />
               </li>
             ))}
           </ul>
         </nav>
         <div className="hidden xl:flex gap-9">
-          <Button variant="outline" className="min-w-[154px]">
+          <Button variant="outline" className="min-w-[154px]" as={'a'} href="tel:+1101111010">
             CONTACT US
           </Button>
-          <Button className="min-w-[154px]">JOIN HYDRA</Button>
+          <Button className="min-w-[154px]" as={'a'} href="#joinhydra">
+            JOIN HYDRA
+          </Button>
         </div>
         <div className="xl:hidden">
           <HeaderMobile />

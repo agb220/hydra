@@ -1,6 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import MenuLink from '../MenuLink';
 import SocialMedia from '../SocialMedia';
+import Button from '../Button';
 import { MOCK_MENU } from '@/utilities/mocks';
 
 const Footer = () => {
@@ -23,13 +25,14 @@ const Footer = () => {
 
       <div className="container ">
         <div className="flex flex-col xl:flex-row justify-between gap-5 pb-[61px] md:pb-[77px]">
-          <Image
-            src={'/images/logo/logo-icon.svg'}
-            alt={'Hydra: Dive Into The Depths Of Virtual Reality'}
-            width={185}
-            height={187}
-            className="self-center xl:self-start max-h-[186px]"
-          />
+          <Link href={'/'} className="self-center xl:self-start max-h-[186px]">
+            <Image
+              src={'/images/logo/logo-icon.svg'}
+              alt={'Hydra: Dive Into The Depths Of Virtual Reality'}
+              width={185}
+              height={187}
+            />
+          </Link>
           <div className="flex flex-row gap-5 justify-between mb-10">
             <div className="relative">
               <ul className="flex flex-col gap-5 md:pl-[81px] md:pr-[104px] md:before:content-[''] md:before:absolute before:left-0 md:before:top-0 md:before:h-full md:before:w-[6px] md:before:bg-[linear-gradient(180deg,#343045_0%,#C0B7E8_35%,#8176AF_68%,#343045_100%)]">
@@ -63,6 +66,9 @@ const Footer = () => {
           <div className="relative self-center xl:self-start">
             <div className="md:pl-[71px] md:before:absolute before:left-0 md:before:top-0 md:before:h-full md:before:w-[6px] md:before:bg-[linear-gradient(180deg,#343045_0%,#C0B7E8_35%,#8176AF_68%,#343045_100%)]">
               <SocialMedia />
+              <Button as="a" href="#joinhydra" className="w-full md:w-fit">
+                BUILD YOUR WORLD
+              </Button>
             </div>
           </div>
         </div>

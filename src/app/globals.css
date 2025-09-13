@@ -103,3 +103,21 @@ input[type='text'] {
   max-width: 1230px;
   padding: 0 15px;
 }
+
+/* hero line animation */
+
+@keyframes circle-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.lines-circle {
+  animation: circle-rotate 8s ease-in-out infinite;
+}

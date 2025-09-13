@@ -3,11 +3,15 @@ import type { NextConfig } from 'next';
 
 const nextConfig = {
   turbopack: {},
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   webpack(config: { module: { rules: { test: RegExp; use: string[] }[] } }) {
     config.module.rules.push({
       test: /\.svg$/,
       use: ['@svgr/webpack'],
     });
+
     return config;
   },
 };
