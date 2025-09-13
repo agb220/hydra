@@ -4,8 +4,20 @@ import Image from 'next/image';
 import Title from './Title';
 import Button from './Button';
 import { MOC_SERVICES } from '@/utilities/mocks';
+import useEmblaCarousel from 'embla-carousel-react';
+
+import { NextButton, PrevButton, usePrevNextButtons } from './embla-carousel/ArrowButton';
 
 const ServicesSection = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    slidesToScroll: 'auto',
+    align: 'start',
+    containScroll: 'trimSnaps',
+  });
+
+  const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } =
+    usePrevNextButtons(emblaApi);
+
   return (
     <section
       className="pb-14 md:pb-[114px] overflow-hidden scroll-mt-17 md:scroll-mt-30"
@@ -27,11 +39,26 @@ const ServicesSection = () => {
             }
             classnameDesc="md:basis-[40%] xl:basis-[650px]"
           />
-          <div className="flex gap-2 md:gap-[11px] overflow-x-auto">
-            {MOC_SERVICES.map((service, index) => (
-              <ServiceCard service={service} key={index} index={index} />
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            <div ref={emblaRef} className="relative w-full">
+              <ul className="flex justify-around gap-2 md:gap-[11px]">
+                {MOC_SERVICES.map((service, index) => (
+                  <li className="w-full min-w-80 xl:min-w-[310px]" key={index}>
+                    <ServiceCard service={service} />
+                  </li>
+                ))}
+              </ul>
+              <div className="xl:hidden">
+                <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+                <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -42,18 +69,11 @@ export default ServicesSection;
 
 interface ServiceCardProps {
   service: { title: string; imgSrc: string; description: string };
-  index: number;
 }
 
 const ServiceCard = ({ ...props }: ServiceCardProps) => {
   return (
-    <motion.article
-      className="pt-[27px] md:pt-[23px] pr-[37px] md:pr-[35px] pb-9 md:pb-10 pl-[33px] md:pl-[25px] rounded-[40px] bg-[radial-gradient(50%_50%_at_50%_50%,#433D60_0%,#211E2E_100%)] w-full min-w-80 basis-80 xl:min-w-[310px] xl:basis-[310px]"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5, delay: 0.3 * props.index }}
-      viewport={{ once: false, amount: 0.3 }}
-    >
+    <article className="pt-[27px] md:pt-[23px] pr-[37px] md:pr-[35px] pb-9 md:pb-10 pl-[33px] md:pl-[25px] rounded-[40px] bg-[radial-gradient(50%_50%_at_50%_50%,#433D60_0%,#211E2E_100%)] w-full">
       <div className="flex flex-col gap-[35px] items-center justify-between h-full">
         <div className="overflow-hidden border-[12px] border-[#0e0e0e7a] aspect-[190/190] max-h-[190px] rounded-full">
           <Image
@@ -74,6 +94,6 @@ const ServiceCard = ({ ...props }: ServiceCardProps) => {
           TRY IT NOW
         </Button>
       </div>
-    </motion.article>
+    </article>
   );
 };

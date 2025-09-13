@@ -1,12 +1,12 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import MenuLink from '../../MenuLink';
 import Button from '../../Button';
 import HeaderMobile from './HeaderMobile';
 import { MOCK_MENU } from '@/utilities/mocks';
 import { cn } from '@/utilities/cn';
-import Link from 'next/link';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -22,6 +22,7 @@ const Header = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
   return (
     <header className="container fixed top-0 left-0 right-0 z-10">
       <div

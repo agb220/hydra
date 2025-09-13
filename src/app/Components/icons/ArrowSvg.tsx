@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { SVGProps } from 'react';
 const ArrowSvg = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={46} height={38} fill="none" {...props}>
+  <svg xmlns="http://www.w3.org/2000/svg" width={46} height={38} {...props}>
     <path
       strokeLinecap="round"
       strokeLinejoin="round"
