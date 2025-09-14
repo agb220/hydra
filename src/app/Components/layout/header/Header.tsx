@@ -5,8 +5,8 @@ import Link from 'next/link';
 import MenuLink from '../../MenuLink';
 import Button from '../../Button';
 import HeaderMobile from './HeaderMobile';
-import { MOCK_MENU } from '@/utilities/mocks';
 import { cn } from '@/utilities/cn';
+import { MOCK_MENU } from '@/utilities/mocks';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);

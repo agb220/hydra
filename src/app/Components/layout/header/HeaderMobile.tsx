@@ -1,7 +1,6 @@
 'use client';
 import { useEffect } from 'react';
 import { useCycle } from 'framer-motion';
-
 import BurgerMenuBtn from './BurgerBtn';
 import Sidebar from './Sidebar';
 import { useLockBodyScroll } from '@/utilities/hooks/useLockBodyScroll';
