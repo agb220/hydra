@@ -48,7 +48,7 @@ const ServicesSection = () => {
             <div ref={emblaRef} className="relative w-full">
               <ul className="flex justify-around gap-2 md:gap-[11px]">
                 {MOC_SERVICES.map((service, index) => (
-                  <li className="w-full min-w-80 xl:min-w-[310px]" key={index}>
+                  <li className="w-full min-w-80 xl:min-w-[310px] h-full" key={index}>
                     <ServiceCard service={service} />
                   </li>
                 ))}
@@ -79,7 +79,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ ...props }: ServiceCardProps) => {
   return (
-    <article className="pt-[27px] md:pt-[23px] pr-[37px] md:pr-[35px] pb-9 md:pb-10 pl-[33px] md:pl-[25px] rounded-[40px] bg-[radial-gradient(50%_50%_at_50%_50%,#433D60_0%,#211E2E_100%)] w-full">
+    <article className="pt-[27px] md:pt-[23px] pr-[37px] md:pr-[35px] pb-9 md:pb-10 pl-[33px] md:pl-[25px] rounded-[40px] bg-[radial-gradient(50%_50%_at_50%_50%,#433D60_0%,#211E2E_100%)] w-full h-full">
       <div className="flex flex-col gap-[35px] items-center justify-between h-full">
         <div className="overflow-hidden border-[12px] border-[#0e0e0e7a] aspect-[190/190] max-h-[190px] rounded-full">
           <Image
