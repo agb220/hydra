@@ -40,12 +40,13 @@ const ServicesSection = () => {
             classnameDesc="md:basis-[40%] xl:basis-[650px]"
           />
           <motion.div
+            className="h-full"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <div ref={emblaRef} className="relative w-full">
+            <div ref={emblaRef} className="relative w-full h-full">
               <ul className="flex justify-around gap-2 md:gap-[11px]">
                 {MOC_SERVICES.map((service, index) => (
                   <li className="w-full min-w-80 xl:min-w-[310px] h-full" key={index}>
