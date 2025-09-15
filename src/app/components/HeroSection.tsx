@@ -6,7 +6,7 @@ import { ArrowSvg, LocationSvg, MailSvg, PhoneSvg } from './icons';
 
 const HeroSection = () => {
   return (
-    <section className="xl:min-h-svh container overflow-x-hidden">
+    <section className="xl:min-h-svh container overflow-x-hidden md:overflow-x-visible">
       <div className="flex flex-col-reverse xl:flex-row justify-between items-center gap-20 xl:gap-10 pt-5 pb-[53px] xl:pt-[100px] xl:pb-[100px]">
         <div className="relative">
           <Image
@@ -20,7 +20,7 @@ const HeroSection = () => {
             <motion.h1
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: false, amount: 0.3 }}
               className="text-4xl md:text-[46px] font-bold mb-9"
             >
@@ -45,7 +45,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: false, amount: 0.3 }}
             >
               <Button

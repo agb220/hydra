@@ -53,10 +53,16 @@ const ServicesSection = () => {
                   </li>
                 ))}
               </ul>
-              <div className="xl:hidden">
+              <motion.div
+                className="xl:hidden"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                viewport={{ once: false, amount: 0.3 }}
+              >
                 <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
                 <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>

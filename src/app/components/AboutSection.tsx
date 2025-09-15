@@ -57,7 +57,7 @@ const AboutSection = () => {
               className="text-sm lg:text-base mb-7"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               viewport={{ once: false, amount: 0.3 }}
             >
               Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus mattis rhoncus urna
@@ -72,7 +72,7 @@ const AboutSection = () => {
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
               viewport={{ once: false, amount: 0.3 }}
             >
               <Button as="a" href="#joinhydra" className="w-full md:w-fit">
