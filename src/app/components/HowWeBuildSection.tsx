@@ -26,7 +26,7 @@ const HowWeBuildSection = () => {
   };
 
   return (
-    <section ref={ref} className="pb-28 scroll-mt-17 md:scroll-mt-30" id="howto">
+    <section ref={ref} className="pb-20 md:pb-28 scroll-mt-17 md:scroll-mt-30" id="howto">
       <div className="container">
         <Title
           title={'HOW WE BUILD <br/> <span class="font-light">WITH HYDRA VR?</span>'}
