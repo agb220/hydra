@@ -82,7 +82,7 @@ const ServiceCard = ({ ...props }: ServiceCardProps) => {
   return (
     <article className="pt-[27px] md:pt-[23px] pr-[37px] md:pr-[35px] pb-9 md:pb-10 pl-[33px] md:pl-[25px] rounded-[40px] bg-[radial-gradient(50%_50%_at_50%_50%,#433D60_0%,#211E2E_100%)] w-full h-full">
       <div className="flex flex-col gap-[35px] items-center justify-between h-full">
-        <div className="overflow-hidden border-[12px] border-[#0e0e0e7a] aspect-[190/190] max-h-[190px] rounded-full">
+        <div className="overflow-hidden border-[12px] border-[#0e0e0e7a] aspect-[190/190] h-[190px] rounded-full bg-bg-purple">
           <Image
             src={props.service.imgSrc}
             alt={props.service.title}
