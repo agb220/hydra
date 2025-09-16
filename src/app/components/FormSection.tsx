@@ -10,7 +10,7 @@ const FormSection = () => {
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: false, amount: 0.2 }}
     >
       <div className="pt-[45px] md:pt-[90px] pb-[65px] md:pb-21 rounded-[100px] bg-[radial-gradient(50%_50%_at_50%_50%,#403a5f_0%,#211e2e_100%)] shadow-[0_4px_4px_rgba(0,0,0,0.25)] px-5 lg:px-[149px]">
         <div className="flex items-center flex-col gap-5 text-2xl md:text-4xl mb-[35px] md:mb-[65px]">
