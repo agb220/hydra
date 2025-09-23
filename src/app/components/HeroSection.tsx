@@ -113,7 +113,7 @@ const HeroSection = () => {
               </div>
               <div className="flex flex-col gap-2.5">
                 <h4 className="font-bold text-sm xl:text-2xl">Pay Us a Visit</h4>
-                <p className="text-xs md:text-sm">Union St, Seattle, WA 98101, United States</p>
+                <p className="text-xs md:text-sm">Country, City, Street, House</p>
               </div>
             </motion.li>
             <motion.li
@@ -126,8 +126,8 @@ const HeroSection = () => {
               <PhoneSvg />
               <div className="flex flex-col gap-[9px]">
                 <h4 className="font-bold text-sm xl:text-2xl">Give Us a Call</h4>
-                <a className="text-xs md:text-sm" href="tel:11011111010">
-                  (110) 1111-1010
+                <a className="text-xs md:text-sm" href="tel:">
+                  phone number
                 </a>
               </div>
             </motion.li>
@@ -141,11 +141,8 @@ const HeroSection = () => {
               <MailSvg />
               <div className="flex flex-col gap-[9px]">
                 <h4 className="font-bold text-sm xl:text-2xl">Send Us a Message</h4>
-                <a
-                  className="text-xs md:text-sm max-w-50 md:max-w-full"
-                  href="mailto:contact@HydraVTech.com"
-                >
-                  Contact@HydraVTech.com
+                <a className="text-xs md:text-sm max-w-50 md:max-w-full" href="mailto:">
+                  email
                 </a>
               </div>
             </motion.li>
