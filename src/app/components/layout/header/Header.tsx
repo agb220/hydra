@@ -49,7 +49,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="hidden xl:flex gap-9">
-          <Button variant="outline" className="min-w-[154px]" as={'a'} href="tel:11">
+          <Button variant="outline" className="min-w-[154px]" as={'a'} href="tel:">
             CONTACT US
           </Button>
           <Button className="min-w-[154px]" as={'a'} href="#joinhydra">

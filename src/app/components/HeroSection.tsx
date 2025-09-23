@@ -126,7 +126,7 @@ const HeroSection = () => {
               <PhoneSvg />
               <div className="flex flex-col gap-[9px]">
                 <h4 className="font-bold text-sm xl:text-2xl">Give Us a Call</h4>
-                <a className="text-xs md:text-sm" href="tel:11">
+                <a className="text-xs md:text-sm" href="tel:">
                   phone number
                 </a>
               </div>
@@ -141,10 +141,7 @@ const HeroSection = () => {
               <MailSvg />
               <div className="flex flex-col gap-[9px]">
                 <h4 className="font-bold text-sm xl:text-2xl">Send Us a Message</h4>
-                <a
-                  className="text-xs md:text-sm max-w-50 md:max-w-full"
-                  href="mailto:email@email.email"
-                >
+                <a className="text-xs md:text-sm max-w-50 md:max-w-full" href="mailto:">
                   email
                 </a>
               </div>
