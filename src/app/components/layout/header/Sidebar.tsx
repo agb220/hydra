@@ -74,7 +74,7 @@ const Sidebar = (props: SidebarProps) => {
                   variant="outline"
                   className="w-full md:w-fit text-base max-h-[52px]"
                   as={'a'}
-                  href="tel:"
+                  href="tel:11"
                 >
                   CONTACT US
                 </Button>
