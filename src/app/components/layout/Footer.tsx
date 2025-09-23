@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="pt-9 md:pt-[49px] font-bold text-sm text-center border-t-[2px] border-transparent [border-image:linear-gradient(90deg,#343045_0%,#C0B7E8_34.9%,#8176AF_68.75%,#343045_100%)_1]">
-          2025 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED
+          2025 © HYDRA LANDING PAGE - ALL RIGHTS RESERVED
         </div>
       </div>
     </footer>
